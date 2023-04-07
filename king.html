@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script scr="html2pdf.bundle.min.js"></script>
+	<title> Curriculum Vitae</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: black;
+			color: #fff;
+		}
+
+		header {
+			background-color: #080000;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+
+		section {
+			padding: 20px;
+			margin: 20px;
+			border: 1px solid #b30d0d;
+			border-radius: 5px;
+		}
+
+		h1,
+		h2 {
+			margin-top: 0;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			color: #190af7;
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
+
+		@media (min-width: 768px) {
+			header {
+				font-size: 2em;
+			}
+
+			section {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			section>* {
+				flex: 1;
+				margin: 10px;
+			}
+
+			section:first-of-type {
+				flex-basis: 100%;
+			}
+
+			section:nth-of-type(2) {
+				flex-basis: calc(50% - 20px);
+			}
+
+			section:nth-of-type(3) {
+				flex-basis: calc(50% - 20px);
+			}
+
+			section:nth-of-type(4) {
+				flex-basis: 100%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Curriculum Vitae</h1>
+	</header>
+	<section>
+		<article id="invoice">
+			<h2>Personal Information</h2>
+			<ul>
+				<li>Name: Munashe S Sibve</li>
+				<li>Email: h220553g@hit.ac.zw</li>
+				<li>Phone: +263 71 411 9146</li>
+				<li>Address: 1436 Southlea Park</li>
+			</ul>
+		</article>
+		<article>
+			<h2>Education</h2>
+			<ul>
+				<li>A'level passes in Mathematics, Computer Science & Geography</li>
+				<li>Degree in progress(Information Security and Assurance)</li>
+			</ul>
+		</article>
+		<article>
+			<h2>Work Experience</h2>
+			<ul>
+				<li>Bon Marche, Avondale Harare, 2020-2021 </li>
+			</ul>
+		</article>
+		<article>
+			<h2>Skills</h2>
+			<ul>
+				<li>Programming Languages: Java, Python, JavaScript</li>
+				<li>Web Development: HTML, CSS, Bootstrap</li>
+				<li>Database Management: MySQL,</li>
+				<li>Other Skills: Project Management and Consistency</li>
+			</ul>
+		</article>
+		<article>
+			<h2>Projects</h2>
+			<ul>
+				<li>Developed a web-based project management tool using Java and MySQL</li>
+				<li>Created a responsive website for a local business using HTML, CSS, and Bootstrap</li>
+				<li>Collaborated on a team to build a mobile app using React Native</li>
+			</ul>
+		</article>
+	</section>
+	<button id="pdf-button">Download PDF</button>
+	<script>
+		const button = document.getElementById('pdf-button');
+
+		function generatePDF() {
+
+			const element = document.getElementById('invoice');
+
+			html2pdf().from(element).save();
+		}
+
+		button.addEventListener('click', generatePDF);
+	</script>
+
+</body>
+<footer>
+	<center>
+		<p>&COPY;kingmuntu|All Rights Reserved</p>
+	</center>
+
+</footer>
+
+</html>
